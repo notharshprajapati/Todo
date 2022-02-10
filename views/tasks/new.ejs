@@ -1,0 +1,17 @@
+<%- include('partials/head') %>
+<div class="container">
+  <h1>New Task</h1>
+  <form action="/todo" method="post" class="mx-auto" style="width: 400px;">
+    <section>
+      <label for="task" class="form-label">Task :</label>
+      <input type="text" id="task" name="task" placeholder="task" class=" form-control">
+    </section> <br>
+    <section>
+      <label for="time" class="form-label">Time :</label>
+      <input type="time" id="time" name="time" placeholder="time" class=" form-control">
+    </section> <br>
+    <button class="btn btn-light">Submit</button>
+  </form>
+  <button class="btn btn-light text-dark btn-sm" onclick="document.location='/todo'">Back</button>
+</div>
+<%- include('partials/footer') %>

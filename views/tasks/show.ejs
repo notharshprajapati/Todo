@@ -1,0 +1,12 @@
+<%- include('partials/head') %>
+<div class="container">
+  <h1>Details</h1>
+  <h2><%= task.task %> at <%= task.time %></h2>
+  <button class="btn btn-info text-dark btn-sm" style="display:inline-block;margin-right:10px;" onclick="document.location='/todo/<%= task.id %>/edit'">Edit</button>
+  <form method="POST" style="display:inline-block;" action="/todo/<%= task.id %>?_method=DELETE">
+    <button class="btn btn-danger text-white btn-sm">Delete</button>
+  </form>
+  <br><br>
+  <button class="btn btn-light " onclick="document.location='/todo'">Back</button>
+</div>
+<%- include('partials/footer') %>

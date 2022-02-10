@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+
+<div class="container">
+  <h1>Edit</h1>
+  <form action="/todo/<%= task.id %>?_method=PATCH" method="post" class="mx-auto" style="width: 400px;">
+    <section>
+      <label for="task" class="form-label">Task :</label>
+      <input type="text" id="task" name="task" placeholder="<%= task.task %>" class=" form-control">
+    </section> <br>
+    <section>
+      <label for="time" class="form-label">Time :</label>
+      <input type="time" id="time" name="time" placeholder="<%= task.time %>" class=" form-control">
+    </section> <br>
+    <button class="btn btn-light">Submit</button>
+  </form>
+
+  <button class="btn btn-light text-dark btn-sm" onclick="document.location='/todo'">Back</button>
+</div>
+</body>
+
+</html>

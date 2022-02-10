@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+
+<div class="p-3 mb-2 black container">
+  <h1>TODO</h1>
+  <h3>
+    <%  for(let task of todo){ %>
+    <ul>
+      <li>
+        <%=  task.task  %> - <%=  task.time  %>
+
+        <a href="todo/<%= task.id %>/ ">...</a>
+      </li>
+    </ul>
+    <% }%>
+</div>
+</h3>
+
+<%- include('partials/footer') %>
